@@ -187,13 +187,13 @@ function getLog() {
 getLog();
 
 // == Playlist ==
-let create = document.getElementById("playlist");
-let popup = document.getElementById("playlist-popup");
-let close = document.getElementById("close-popup");
+// let create = document.getElementById("playlist");
+// let popup = document.getElementById("playlist-popup");
+// let close = document.getElementById("close-popup");
 
-create.addEventListener("click",()=>{
-    popup.classList.remove('hiden');
-})
-close.addEventListener("click",()=>{
-    popup.classList.add('hiden');
-})
+// create.addEventListener("click",()=>{
+//     popup.classList.remove('hiden');
+// })
+// close.addEventListener("click",()=>{
+//     popup.classList.add('hiden');
+// })

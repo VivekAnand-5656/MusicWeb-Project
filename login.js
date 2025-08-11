@@ -10,10 +10,8 @@ login.addEventListener("click",(e)=>{
     e.preventDefault();
     users.forEach(data => {
     if((data.userpass === userp.value) && (data.username === userDetail.value)){
-        
         window.location.href="main.html";
-        localStorage.setItem("currentUser",userDetail.value);
-        localStorage.setItem("userEmail",data.useremail);
+        localStorage.setItem("currentUser",JSON.stringify(userDetail.value));
     } else{
         msg.textContent = "Incorrect username or password";
     }

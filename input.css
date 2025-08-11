@@ -3,7 +3,7 @@ body::-webkit-scrollbar{
     display: none;
 }
 .btns button{
-    @apply border-2 border-solid border-[#306567] p-1.5 rounded-[0.2rem] cursor-pointer font-semibold;
+    @apply border-2 border-solid border-[#00F6FF] p-1.5 rounded-[0.2rem] cursor-pointer font-semibold;
 }
 .links{
     @apply w-[100%] h-[100%] flex flex-col gap-2;
@@ -12,10 +12,10 @@ body::-webkit-scrollbar{
     @apply w-[100%] rounded-[5px] p-2 text-[1.2rem] font-semibold transition ease-in-out duration-300 cursor-pointer;
 }
 .links li.active{
-    @apply bg-[#306567] text-black ;
+    @apply bg-[#00F6FF] text-[#000] ;
 }
 .links li:hover{
-    @apply bg-[#306567] text-black ;
+    @apply bg-[#00F6FF] text-black ;
 }
 /* == Section == */
 .songs{
@@ -29,7 +29,7 @@ body::-webkit-scrollbar{
 }
 /* === login === */
 .login{
-    @apply bg-[#046b6c];
+    @apply bg-[#030712];
  }
  /* == Playlist == */
 .hiden{

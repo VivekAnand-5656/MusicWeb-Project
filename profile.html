@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneFlow || Profile</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="w-[100vw] h-[10vh] bg-[#013330] flex justify-center items-center fixed top-0 z-50">
+        <div class="w-[90%] h-[100%] text-white flex justify-between items-center p-2">
+            <h1 class="font-semibold text-[2rem]">Tune<span class="text-[#00F6FF]">Flow</span></h1>
+            <div class="btns flex gap-3 justify-center items-center">
+                <p class="font-semibold" id="userid"></p>
+                <a href=""><img src="./images/user_16470760.png" class="w-[2rem]" alt="Profile image"></a>
+                <button id="logout"
+                    class="bg-[#306567] text-white transition ease-in-out duration-500 hover:bg-transparent hover:text-white ">Log
+                    out <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </nav>
+    <main class="w-[100vw] h-[90vh] mt-[10vh] bg-[#013330] flex flex-col justify-center items-center">
+        <h1 class="text-white font-semibold text-[2rem]">Profile</h1>
+        <div class="flex justify-center items-center gap-3 w-[50%] h-[40%] rounded-[1rem] bg-[#858181]">
+           <div>
+            <img src="./images/user_16470760.png" class="w-[5rem]" alt="">
+           </div>     
+           <div>
+            <h1 id="username" class="text-[2rem] text-white font-semibold"></h1>
+            <p id="mail" class="text-[1.5rem]"></p>
+           </div>
+        </div>
+        <button class="bg-[#f00d0d] w-[10vw] h-[50px] rounded-[0.2rem] mt-2 text-white font-semibold "><a href="./main.html">Back</a></button>
+    </main>
+    
+    <!-- == JS == -->
+    <script src="profile.js"></script>
+</body>
+</html>

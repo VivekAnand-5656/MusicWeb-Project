@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneFlow || Login</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="login w-[100vw] h-[100vh] flex justify-center items-center ">
+        <form action=""
+            class="form w-[30%] h-[80%] bg-[#013330] text-white p-3 rounded-[1rem] flex flex-col justify-evenly items-center ">
+            <h1 class="font-semibold text-[2rem]">Tune<span class="text-[#00F6FF]">Flow</span></h1>
+            <h3 class="font-semibold text-[1.5rem]">Login</h3>
+            <div class="box w-[100%] h-[50%] flex flex-col items-center gap-4">
+                <input type="text" id="detail"
+                    class="w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem]"
+                    placeholder="Enter Username" required>
+                <input type="password" name="password"
+                    class=" w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem] "
+                    id="password" placeholder="Enter Password" required>
+                <button type="submit" id="login"
+                    class="bg-[#00F6FF] p-2 w-[30%] text-black font-semibold cursor-pointer  rounded-[0.2rem] transition duration-300 hover:bg-transparent hover:border-2 hover:border-solid hover:border-[#00F6FF] hover:text-white   shadow-xl shadow-cyan-500/50 ">Login</button>
+            </div>
+            <p>Don't have account ? <a href="./signup.html" class="text-[#00F6FF]">Sign up</a></p>
+            <p class="text-red-700 " id="msg"></p>
+        </form>
+    </div>
+
+
+<!-- == JS == -->
+<script src="login.js"></script>
+</body>
+
+</html>

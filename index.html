@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuneFlow || Home</title>
+    <title>Musix || Home</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./images/images (1).jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body>
-    <nav class="w-[100vw] h-[10vh] bg-[#0a132a] flex justify-center items-center fixed top-0 z-50">
-        <div class="w-[90%] h-[100%] text-white flex justify-between items-center p-1">
-            <h1 class="font-semibold text-[2rem]">Tune<span class="text-[#00F6FF]">Flow</span></h1>
+    <nav
+        class="w-[100vw] h-[10vh] bg-[#fff] border-b-1 border-solid border-[#000] flex justify-center items-center fixed top-0 z-50">
+        <div class="w-[90%] h-[100%] text-black flex justify-between items-center p-1">
+            <h1 class="font-semibold text-[2rem]">Musix<span class="text-[#ff8000]"><i
+                        class="fa-solid fa-music"></i></span></h1>
+            <input type="search" name="search" id="search"
+                class="w-[50%] border-2 border-solid border-[#306567] p-1.5 rounded-[0.2rem] outline-0"
+                placeholder="Search songs">
             <div class="btns">
-                <button
-                    class="bg-[#00F6FF] text-black transition ease-in-out duration-500 hover:bg-transparent hover:text-white"><a href="./login.html">Log in</a></button>
-                 
+                <button type="button"
+                    class="w-[100px] inline-block rounded bg-orange-500 text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-orange-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-orange-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-orange-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0"><a
+                        href="./login.html">Login</a></button>
+
             </div>
         </div>
     </nav>
     <div class="cotainer flex relative mt-[10vh]">
-        <aside class="w-[20vw] h-[90vh] bg-[#030712] text-white p-4   flex flex-col gap-3 fixed  left-0 border-r-2 border-solid border-[#00F6FF]">
-            <input type="search" name="search" id="search"
-                class="w-[100%] border-2 border-solid border-[#306567] p-1.5 rounded-[0.2rem] outline-0"
-                placeholder="Search songs">
+        <aside
+            class="w-[15vw] h-[90vh] bg-[#fff] text-black p-4   flex flex-col gap-3 fixed  left-0 shadow-[7px_-1px_12px_-2px_rgba(0,_0,_0,_0.7)]">
+
             <ul class="links">
                 <li class="active"><a href="./index.html">Home</a></li>
-                <li id="playlist"><a href="">Playlist <i class="fa-solid fa-circle-plus"></i></a></li>
+                <li id="playlist">Playlist</li>
             </ul>
         </aside>
-        
 
-        <div class="w-full ml-[20vw] bg-[#030712]   relative  p-5">
-            <h1 class="text-white text-[1.5rem] font-semibold sticky">Trending Songs <i
-                    class="fa-solid fa-guitar text-[#00F6FF]"></i></h1>
+
+        <div class="w-full ml-[15vw] bg-[#fff]   relative  p-5">
+            <h1 class="text-black text-[1.5rem] font-semibold sticky">Trending Songs</h1>
             <div id="truck" class="songs  w-[100%] h-[70vh] flex flex-wrap justify-around gap-2 p-5">
                 <!-- <div class="cards w-[200px] h-[250px] rounded-[0.5rem] bg-[#686565] p-2 flex flex-col justify-around">
                     <img src="./images/audio-device-icon-png.png" class="w-full h-[60%]" alt="">
@@ -50,27 +56,38 @@
                 </div>  -->
             </div>
             <!-- == Custom Audio == -->
-            <div class="player bg-[#030712] flex justify-center fixed bottom-0  h-[70px]  w-[100%] border-t-2 border-solid border-[#00F6FF] left-0 gap-2 p-0.5 z-50">
-                 <!-- Hidden default audio --> 
+            <div
+                class="player bg-[#fff] flex justify-center fixed bottom-0 h-[70px] w-[100%] border-t-[1px] border-solid border-[#bec2c2] left-0 gap-2 p-0.5 z-50">
                 <!-- Custom Audio Controls -->
-                <div id="custom-player" class="w-[50%] bg-[#030712]  rounded-[0.5rem] flex flex-col gap-2">
-                    <div id="now-playing" class="text-white h-[10%] font-semibold text-[1rem]">
+                <div id="custom-player" class="w-[50%] bg-[#fff] rounded-[0.5rem] flex flex-col gap-2">
+                    <div id="now-playing" class="text-black h-[10%] font-semibold text-[1rem]">
                         🎵 No song playing
                     </div>
                     <div class="h-[90%] flex items-center justify-between">
-                        <button id="play-btn" class="text-white text-2xl hover:text-[#00F6FF]">
+                        <button id="prev-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
+                            <i class="fa-solid fa-backward"></i>
+                        </button>
+
+                        <button id="play-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
                             <i class="fa-solid fa-circle-play"></i>
                         </button>
-                        <input id="progress-bar" type="range" value="0" class="w-[60%] mx-4" />
-                        <div class="text-white text-sm" id="duration">00:00 / 00:00</div>
+
+                        <button id="next-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
+                            <i class="fa-solid fa-forward"></i>
+                        </button>
+
+                        <input id="progress-bar" type="range" value="0" class="w-[50%] mx-4" />
+
+                        <div class="text-black text-sm" id="duration">00:00 / 00:00</div>
                     </div>
                 </div>
 
-                <div class="text-white">
-                    <p id="s-name" class="font-semibold text-[#00F6FF]">Unknown</p>
+                <div class="text-black">
+                    <p id="s-name" class="font-semibold text-[#ff8000]">Unknown</p>
                     <p id="s-art">Unknown</p>
                 </div>
             </div>
+
         </div>
 
     </div>

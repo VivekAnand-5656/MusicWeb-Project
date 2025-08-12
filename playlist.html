@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlists - ToneFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800 p-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">ToneFlow</h1>
+        <nav>
+            <a href="index.html" class="mx-3 hover:text-yellow-400">Home</a>
+            <a href="playlists.html" class="mx-3 text-yellow-400 font-semibold">Playlists</a>
+            <a href="profile.html" class="mx-3 hover:text-yellow-400">Profile</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="p-6">
+        <h2 class="text-3xl font-bold mb-4">Your Playlists</h2>
+    </section>
+
+    <!-- Playlist Container -->
+    <section class="p-6 space-y-6" id="playlist-container">
+        <!-- Playlists will load here -->
+    </section>
+
+    <script>
+        // Multiple playlists with songs
+        const playlists = [
+            {
+                name: "My Favourites",
+                cover: "https://via.placeholder.com/200",
+                songs: [
+                    { title: "Let Me Love You", artist: "Justin Bieber", duration: "3:25" },
+                    { title: "Blinding Lights", artist: "The Weeknd", duration: "4:02" },
+                    { title: "Senorita", artist: "Shawn Mendes", duration: "3:10" }
+                ]
+            },
+            {
+                name: "Workout Vibes",
+                cover: "https://via.placeholder.com/200",
+                songs: [
+                    { title: "Eye of the Tiger", artist: "Survivor", duration: "4:05" },
+                    { title: "Stronger", artist: "Kanye West", duration: "5:12" },
+                    { title: "Can't Hold Us", artist: "Macklemore", duration: "4:18" }
+                ]
+            },
+            {
+                name: "Chill Beats",
+                cover: "https://via.placeholder.com/200",
+                songs: [
+                    { title: "Lo-Fi Dreams", artist: "Chillhop", duration: "3:55" },
+                    { title: "Rainy Night", artist: "Smooth LoFi", duration: "4:15" },
+                    { title: "Jazzhop Breeze", artist: "Cafe Beats", duration: "5:00" }
+                ]
+            }
+        ];
+
+        const container = document.getElementById("playlist-container");
+
+        playlists.forEach((pl, index) => {
+            const playlistHTML = `
+                <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+                    <!-- Playlist Header -->
+                    <div class="flex items-center gap-4 cursor-pointer" onclick="toggleSongs(${index})">
+                        <img src="${pl.cover}" alt="${pl.name}" class="w-20 h-20 object-cover rounded-md">
+                        <div>
+                            <h3 class="text-xl font-bold">${pl.name}</h3>
+                            <p class="text-gray-400">${pl.songs.length} songs</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Song List -->
+                    <div id="songs-${index}" class="hidden mt-4">
+                        <table class="w-full text-left">
+                            <thead class="border-b border-gray-700 text-gray-400">
+                                <tr>
+                                    <th class="py-2">#</th>
+                                    <th>Title</th>
+                                    <th>Artist</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${pl.songs.map((song, i) => `
+                                    <tr class="hover:bg-gray-700">
+                                        <td class="py-2">${i + 1}</td>
+                                        <td>${song.title}</td>
+                                        <td>${song.artist}</td>
+                                        <td>${song.duration}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += playlistHTML;
+        });
+
+        function toggleSongs(index) {
+            const songList = document.getElementById(`songs-${index}`);
+            songList.classList.toggle("hidden");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneFlow || Playlist</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./images/images (1).jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="w-[100vw] h-[10vh] bg-[#0a132a] flex justify-center items-center fixed top-0 z-50">
+        <div class="w-[90%] h-[100%] text-white flex justify-between items-center p-2">
+            <h1 class="font-semibold text-[2rem]">Tune<span class="text-[#00F6FF]">Flow</span></h1>
+            <div class="btns flex gap-3 justify-center items-center">
+                <p class="font-semibold" id="userid"></p>
+                <a href="./profile.html"><img src="./images/user_16470760.png" class="w-[2rem]" alt="Profile image"></a>
+                <button id="logout" class="bg-[#00F6FF] text-black transition ease-in-out duration-500 hover:bg-transparent hover:text-white ">Log
+                    out <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </nav>
+    <!-- == PopUp == -->
+    <div id="playlist-popup"
+        class="hiden fixed top-0 left-0 w-[100vw] h-[100vh] bg-transparent bg-opacity-50 flex justify-center items-center z-50">
+        <div
+            class="w-[50%] h-[50%] flex flex-col gap-2 justify-center items-center border-2 border-solid border-[#fff] rounded-[0.5rem] bg-[#013330] p-5 relative">
+            <i id="close-popup" class="fa-solid fa-square-xmark right-0 text-[1.5rem] cursor-pointer ml-[100%] mt-[-12%] text-[#fd0b0b]"></i>
+            <h1 class="text-white text-[2rem]">New Playlist</h1>
+            <input type="text" placeholder="Playlist Name" id="input"
+                class="border-2 text-white outline-0 border-solid border-[#306567] p-2 rounded-[5px] w-[70%]">
+            <button id="create"
+                class="bg-[#ff5555] w-[20%] p-2 text-white font-semibold rounded-[5px] cursor-pointer">Create</button>
+        </div>
+    </div>
+    <!-- === -->
+    <div class="cotainer flex relative mt-[10vh] bg-[#030712]  text-black">
+        <aside class="w-[15vw] h-[90vh] bg-[#030712]  text-white p-4   flex flex-col gap-3 fixed  left-0 border-r border-solid border-[#00F6FF]">
+            <input type="search" name="search" id="search"
+                class="w-[100%] border-2 border-solid border-[#306567] text-white p-1.5 rounded-[0.2rem] outline-0"
+                placeholder="Search songs">
+            <ul class="links text-white">
+                <li class=""><a href="./main.html">Home</a></li>
+                <li id="" class="active flex justify-between items-center"> Playlist </li>
+             </ul> 
+            
+        </aside>
+
+
+        <div class="w-full bg-[#030712] h-[80vh] ml-[20vw] relative  flex flex-col  gap-2  p-5"> 
+            <div class="flex justify-between items-center">
+                <h1 class="text-white font-semibold text-2xl">Your Playlists</h1>
+                <button id="playlist" class="cursor-pointer text-white bg-[#054d42] p-1.5 font-semibold rounded-[0.2rem] ">Create <i class="fa-solid fa-circle-plus"></i></button>
+            </div>
+            <!--== Plalists == -->
+            <div id="song-playlist" class="song-playlist w-full overflow-auto flex flex-col  gap-2">
+                <!-- <div class="text-white bg-[#267376] cursor-pointer p-2 rounded-t-[0.5rem]">
+                    <h3 class="text-[1.5rem] font-semibold">My Songs</h3>
+                    <p>3 songs</p>
+                </div>
+                <div class=" bg-[#267376]">
+                    <table class="w-full text-left">
+                         <thead class="border-b border-gray-700 text-gray-200">
+                                <tr>
+                                    <th class="py-2">No.</th>
+                                    <th>Title</th>
+                                    <th>Artist</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                    <tr class="hover:bg-gray-700 text-white">
+                                        <td class="py-2">${i + 1}</td>
+                                        <td>${song.title}</td>
+                                        <td>${song.artist}</td>
+                                        <td>
+                                            <button class="p-1.5 cursor-pointer text-[#fff]"><i class="fa-solid fa-play"></i></button>
+                                            <button class="p-1.5 cursor-pointer  text-[#f00]"><i class="fa-solid fa-trash"></i></button>
+                                        </td>
+                                    </tr> 
+                                    
+                            </tbody>
+                    </table>
+                </div> -->
+            </div>
+            
+            <!-- == Custom Audio == -->
+            <div class="player bg-[#030712] flex justify-center fixed bottom-0  h-[70px]  w-[100%] left-0 gap-2 p-0.5 z-50">
+                <!-- <audio id="audio-player" controls class="hidden w-[80%] h-full bg-none " src="" type="mp3" ></audio> -->
+                <!-- Hidden default audio -->
+                <!-- Custom Audio Controls -->
+                <div id="custom-player" class="w-[50%] bg-[#030712]  rounded-xl flex flex-col gap-2">
+                    <div id="now-playing" class="text-white h-[10%] font-semibold text-[1rem]">
+                        🎵 No song playing
+                    </div>
+                    <div class="h-[90%] flex items-center justify-between">
+                        <button id="play-btn" class="text-white text-2xl hover:text-[#013330]">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </button>
+                        <input id="progress-bar" type="range" value="0" class="w-[60%] mx-4" />
+                        <div class="text-white text-sm" id="duration">00:00 / 00:00</div>
+                    </div>
+                </div>
+
+                <div class="text-white">
+                    <p id="s-name" class="font-semibold text-[#fff]">Unknown</p>
+                    <p id="s-art">Unknown</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- === JS === -->
+    <script src="playlist.js"></script>
+</body>
+
+</html>

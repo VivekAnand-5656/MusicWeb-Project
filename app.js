@@ -35,8 +35,7 @@ async function getSongs() {
 
   songs.forEach((e, index) => {
     const box = document.createElement("div");
-    box.className =
-      "cards w-[150px] h-[200px] rounded-[0.5rem] bg-[#fff] shadow-[0px_11px_17px_-3px_rgba(0,_0,_0,_0.7)] p-3 flex flex-col justify-between";
+    box.className = "cards w-[150px] h-[200px] text-black rounded-[0.5rem] bg-[#fff] shadow-[0px_11px_17px_-3px_rgba(0,_0,_0,_0.7)] p-3 flex flex-col justify-between";
 
     box.innerHTML = `
             <img src="${e.previewImg}" class="w-full h-[60%] rounded-[5px]" alt="">

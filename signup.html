@@ -11,25 +11,28 @@
 </head>
 
 <body>
-    <div class="login w-[100vw] h-[100vh] flex justify-center items-center ">
+    <div class="login sm:w-[100vw] w-[100vw] h-[100vh] sm:h-[100vh] flex justify-center items-center ">
         <form  id="form"
-            class="form w-[30%] h-[80%] bg-[#ff8000] border-2 border-solid border-[#00F6FF] text-white p-3 rounded-[1rem] flex flex-col justify-evenly items-center ">
+            class="form w-[90%] h-auto sm:w-[30%] sm:h-auto bg-[#ff8000] border-2 border-solid border-[#ff8000] text-black sm:p-3 p-1 sm:gap-2 rounded-[0.5rem] sm:rounded-[1rem] flex flex-col justify-evenly items-center ">
             <h1 class="font-semibold text-black text-[2rem]">Musix<span class="text-[#fff]"><i class="fa-solid fa-music"></i></span></h1>
-            <h3 class="font-semibold text-[1.5rem]">Sign Up</h3>
-            <div class="box w-[100%] h-[50%] flex flex-col items-center gap-4">
+            <h3 class="font-semibold text-[1.5rem] text-white">Sign Up</h3>
+            <div class="box sm:w-[100%] w-[100%] h-[80%] sm:h-[50%] sm:flex flex flex-col justify-center items-center sm:flex-col sm:items-center gap-4">
                 <input type="text" id="username"
-                    class="w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem]"
+                    class="sm:w-[80%] w-[90%] sm:h-auto  border-1 border-solid border-[#fff] outline-0 p-2 rounded-[0.2rem]"
                     name="Username" placeholder="Enter Username" required>
                 <input type="email" id="email" name="Email"
-                    class="w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem]"
+                    class="sm:w-[80%] w-[90%] sm:h-auto border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem]"
                     placeholder="Enter Email" required>
                 <input type="password" name="password"
-                    class=" w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem] "
+                    class=" w-[90%] sm:h-auto sm:w-[80%] border-1 border-solid border-[#00F6FF] outline-0 p-2 rounded-[0.2rem] "
                     id="password" placeholder="Enter Password" required>
                 <button id="submit" type="submit"
-                    class="bg-[#fff] p-2 w-[30%] text-black font-semibold cursor-pointer  rounded-[0.2rem] transition duration-300 hover:bg-transparent hover:border-2 hover:border-solid hover:border-[#fff] hover:text-white ">Sign Up</button>
+                    class="bg-[#fff] p-2 sm:w-[30%] w-[40%] text-[1em] text-black font-semibold cursor-pointer  rounded-[0.2rem] transition duration-300 hover:bg-transparent hover:border-2 hover:border-solid hover:border-[#fff] hover:text-white ">Sign Up</button>
             </div>
-            <p>Already have an account ? <a href="./login.html" class="text-[#000]">Login</a></p>
+            <div class=" w-[100%] h-[40%] flex flex-col justify-center items-center ">
+                <img src="./images/login.png" class="sm:w-[10vw] w-[50vw] h-[20vh]" alt="">
+                <p>Already have an account ? <a href="./login.html" class="text-[#fff]">Login</a></p>
+            </div>
         </form>
     </div>
 

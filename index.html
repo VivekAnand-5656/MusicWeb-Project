@@ -12,35 +12,32 @@
 
 <body>
     <nav
-        class="w-[100vw] h-[10vh] bg-[#fff] border-b-1 border-solid border-[#000] flex justify-center items-center fixed top-0 z-50">
-        <div class="w-[90%] h-[100%] text-black flex justify-between items-center p-1">
-            <h1 class="font-semibold text-[2rem]">Musix<span class="text-[#ff8000]"><i
+        class="w-[100vw] h-[8vh] flex justify-between sm:w-[100vw] sm:h-[10vh] bg-[#fff] border-b-1 border-solid border-[#000] sm:flex sm:justify-center sm:items-center fixed top-0 z-50">
+        <div class="w-[100%] h-[100%] sm:w-[90%] sm:h-[100%] text-black flex justify-between items-center p-2 sm:p-1">
+            <h1 class="font-semibold text-[1.5em] sm:text-[2rem]">Musix<span class="text-[#ff8000]"><i
                         class="fa-solid fa-music"></i></span></h1>
             <input type="search" name="search" id="search"
-                class="w-[50%] border-2 border-solid border-[#306567] p-1.5 rounded-[0.2rem] outline-0"
+                class="w-[50%] sm:w-[50%] h-[80%] sm:h-[100%] border-2 border-solid border-[#306567] p-1.5 rounded-[0.2rem] outline-0"
                 placeholder="Search songs">
             <div class="btns">
                 <button type="button"
-                    class="w-[100px] inline-block rounded bg-orange-500 text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-orange-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-orange-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-orange-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0"><a
+                    class="w-[80px] h-[100%] sm:h-[100%] sm:w-[100px] inline-block rounded bg-orange-500 text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-orange-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-orange-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-orange-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0"><a
                         href="./login.html">Login</a></button>
 
             </div>
         </div>
     </nav>
-    <div class="cotainer flex relative mt-[10vh]">
+    <div class="cotainer w-[100vw] sm:h-auto h-[8vh] flex-col sm:flex-row sm:flex relative mt-[8vh] sm:mt-[10vh]">
         <aside
-            class="w-[15vw] h-[90vh] bg-[#fff] text-black p-4   flex flex-col gap-3 fixed  left-0 shadow-[7px_-1px_12px_-2px_rgba(0,_0,_0,_0.7)]">
-
+            class="w-[100vw] h-[8vh] sm:w-[15vw] sm:h-[90vh] bg-[#fff] text-black sm:p-4 p-2   flex flex-row sm:flex-col gap-3 sm:fixed  left-0 shadow-[7px_-1px_12px_-2px_rgba(0,_0,_0,_0.7)]">
             <ul class="links">
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li id="playlist">Playlist</li>
             </ul>
         </aside>
-
-
-        <div class="w-full ml-[15vw] bg-[#fff]   relative  p-5">
-            <h1 class="text-black text-[1.5rem] font-semibold sticky">Trending Songs</h1>
-            <div id="truck" class="songs  w-[100%] h-[70vh] flex flex-wrap justify-around gap-2 p-5">
+        <div class="w-[100vw] h-auto sm:w-full sm:ml-[15vw] bg-[#fff]   relative p-2 sm:p-5">
+            <h1 class="text-black text-[0.9rem] sm:text-[1.5rem] font-semibold sticky">Trending Songs</h1>
+            <div id="truck" class="songs  w-[100%] h-[70vh] flex flex-wrap justify-around gap-1 sm:gap-2 p-1 sm:p-5">
                 <!-- <div class="cards w-[200px] h-[250px] rounded-[0.5rem] bg-[#686565] p-2 flex flex-col justify-around">
                     <img src="./images/audio-device-icon-png.png" class="w-full h-[60%]" alt="">
                     <p class="text-[1rem] font-semibold">Mahiya we</p>
@@ -56,33 +53,42 @@
                 </div>  -->
             </div>
             <!-- == Custom Audio == -->
+
+
             <div
-                class="player bg-[#fff] flex justify-center fixed bottom-0 h-[70px] w-[100%] border-t-[1px] border-solid border-[#bec2c2] left-0 gap-2 p-0.5 z-50">
+                class="player sm:bg-[#dbc9c9] bg-[#dbc9c9] flex justify-center fixed bottom-0 h-[70px] w-[100%] sm:w-[100%] border-t-[1px] border-solid border-[#bec2c2] left-0 gap-2 p-0.5 z-50">
                 <!-- Custom Audio Controls -->
-                <div id="custom-player" class="w-[50%] bg-[#fff] rounded-[0.5rem] flex flex-col gap-2">
-                    <div id="now-playing" class="text-black h-[10%] font-semibold text-[1rem]">
+                <div id="custom-player"
+                    class="w-[80%] sm:w-[80%]  sm:bg-transparent  sm:rounded-[0.5rem] flex justify-center  sm:flex-col gap-1 sm:gap-2">
+                    <div id="now-playing"
+                        class="text-black sm:h-[10%] sm:w-[100%] sm:text-center font-semibold sm:block hidden sm:text-[1rem]">
                         🎵 No song playing
                     </div>
-                    <div class="h-[90%] flex items-center justify-between">
-                        <button id="prev-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
-                            <i class="fa-solid fa-backward"></i>
-                        </button>
+                    <div
+                        class=" h-[100%] sm:h-[50%]  w-[100%] sm:flex flex flex-col sm:flex-row  items-center sm:justify-center justify-center sm:p-0 p-1">
+                        <div class="w-[100%] sm:w-[50%] flex  justify-center sm:p-0 p-1">
+                            <input id="progress-bar" type="range" value="0" class="w-[100%] sm:w-[100%] mx-4" />
+                        </div>
+                        <div>
+                            <button id="prev-btn" class="text-black text-[1.5rem] sm:text-2xl hover:text-[#6a6b6b]">
+                                <i class="fa-solid fa-backward"></i>
+                            </button>
 
-                        <button id="play-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
-                            <i class="fa-solid fa-circle-play"></i>
-                        </button>
+                            <button id="play-btn" class="text-black text-[1.5rem] sm:text-2xl hover:text-[#6a6b6b]">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </button>
 
-                        <button id="next-btn" class="text-black text-2xl hover:text-[#6a6b6b]">
-                            <i class="fa-solid fa-forward"></i>
-                        </button>
+                            <button id="next-btn" class="text-black text-[1.5rem] sm:text-2xl hover:text-[#6a6b6b]">
+                                <i class="fa-solid fa-forward"></i>
+                            </button>
 
-                        <input id="progress-bar" type="range" value="0" class="w-[50%] mx-4" />
 
-                        <div class="text-black text-sm" id="duration">00:00 / 00:00</div>
+                            <div class="text-black text-sm " id="duration">00:00 / 00:00</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="text-black">
+                <div class="text-black h-[50%]">
                     <p id="s-name" class="font-semibold text-[#ff8000]">Unknown</p>
                     <p id="s-art">Unknown</p>
                 </div>

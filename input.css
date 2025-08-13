@@ -6,10 +6,10 @@ body::-webkit-scrollbar{
     @apply border-2 border-solid border-[#0a132a] p-1.5 rounded-[0.2rem] cursor-pointer font-semibold;
 }
 .links{
-    @apply w-[100%] h-auto flex flex-col gap-2;
+    @apply w-[100%] sm:w-[100%] h-[100%] sm:h-auto flex flex-row justify-center items-center sm:justify-normal sm:flex-col gap-2;
 }
 .links li{
-    @apply w-[100%] rounded-[5px] p-2 text-[1.2rem] font-semibold transition ease-linear duration-500 cursor-pointer;
+    @apply sm:w-[100%] rounded-[5px] sm:p-2 text-[1.2rem] font-semibold transition ease-linear duration-500 cursor-pointer;
 }
 .links li.active{
     @apply  text-[#ff8000] ;
